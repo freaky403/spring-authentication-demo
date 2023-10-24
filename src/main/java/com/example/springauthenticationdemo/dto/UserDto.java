@@ -1,0 +1,52 @@
+/*
+ * Copyright (c) 2023, Mint
+ * FREE TO USE
+ *           _____                    _____                    _____                _____
+ *          /\    \                  /\    \                  /\    \              /\    \
+ *         /::\____\                /::\    \                /::\____\            /::\    \
+ *        /::::|   |                \:::\    \              /::::|   |            \:::\    \
+ *       /:::::|   |                 \:::\    \            /:::::|   |             \:::\    \
+ *      /::::::|   |                  \:::\    \          /::::::|   |              \:::\    \
+ *     /:::/|::|   |                   \:::\    \        /:::/|::|   |               \:::\    \
+ *    /:::/ |::|   |                   /::::\    \      /:::/ |::|   |               /::::\    \
+ *   /:::/  |::|___|______    ____    /::::::\    \    /:::/  |::|   | _____        /::::::\    \
+ *  /:::/   |::::::::\    \  /\   \  /:::/\:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+ * /:::/    |:::::::::\____\/::\   \/:::/  \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+ * \::/    / ~~~~~/:::/    /\:::\  /:::/    \::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+ *  \/____/      /:::/    /  \:::\/:::/    / \/____/  \/____/ |::| /:::/    /   /:::/    / \/____/
+ *              /:::/    /    \::::::/    /                   |::|/:::/    /   /:::/    /
+ *             /:::/    /      \::::/____/                    |::::::/    /   /:::/    /
+ *            /:::/    /        \:::\    \                    |:::::/    /    \::/    /
+ *           /:::/    /          \:::\    \                   |::::/    /      \/____/
+ *          /:::/    /            \:::\    \                  /:::/    /
+ *         /:::/    /              \:::\____\                /:::/    /
+ *         \::/    /                \::/    /                \::/    /
+ *          \/____/                  \/____/                  \/____/
+ *
+ * If you don't get it, don't worry, cause neither does the developer .
+ */
+
+package com.example.springauthenticationdemo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * DTO for {@link com.example.springauthenticationdemo.entities.User}
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Accessors(chain = true)
+public class UserDto implements Serializable {
+    private Long id;
+    private String username;
+    private String email;
+    private Set<RoleDto> roles = new HashSet<>();
+}
